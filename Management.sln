@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Management", "Mangement\Management.csproj", "{E6C737F0-1169-4339-B6F3-843C77BEEDEF}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ManagementSetup", "ManagementSetup\ManagementSetup.vdproj", "{4733FF2D-2DBE-4762-822C-7E35107BE797}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6C737F0-1169-4339-B6F3-843C77BEEDEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6C737F0-1169-4339-B6F3-843C77BEEDEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6C737F0-1169-4339-B6F3-843C77BEEDEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6C737F0-1169-4339-B6F3-843C77BEEDEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4733FF2D-2DBE-4762-822C-7E35107BE797}.Debug|Any CPU.ActiveCfg = Debug
+		{4733FF2D-2DBE-4762-822C-7E35107BE797}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

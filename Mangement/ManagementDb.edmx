@@ -1,0 +1,311 @@
+﻿<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+<!-- EF Runtime content -->
+<edmx:Runtime>
+<!-- SSDL content -->
+<edmx:StorageModels>
+<Schema Namespace="ManagementDbModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ManagementDbModelStoreContainer">
+    <EntitySet Name="Counters" EntityType="ManagementDbModel.Store.Counters" store:Type="Tables" />
+    <EntitySet Name="Customers" EntityType="ManagementDbModel.Store.Customers" store:Type="Tables" />
+    <EntitySet Name="Patches" EntityType="ManagementDbModel.Store.Patches" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="ManagementDbModel.Store.Products" store:Type="Tables" />
+    <EntitySet Name="StockInRecords" EntityType="ManagementDbModel.Store.StockInRecords" store:Type="Tables" />
+    <EntitySet Name="StockOutRecords" EntityType="ManagementDbModel.Store.StockOutRecords" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="ManagementDbModel.Store.Users" store:Type="Tables" />
+  </EntityContainer>
+  <EntityType Name="Counters">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Value" Type="nvarchar" MaxLength="100" />
+    <Property Name="Format" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="ContactPerson" Type="nvarchar" MaxLength="100" />
+    <Property Name="Contact" Type="nvarchar" MaxLength="100" />
+    <Property Name="Address" Type="nvarchar" MaxLength="700" />
+  </EntityType>
+  <EntityType Name="Patches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Installed" Type="bit" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="Spec" Type="nvarchar" MaxLength="200" />
+    <Property Name="Unit" Type="nvarchar" MaxLength="50" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Quantity" Type="float" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="StockInRecords">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="200" />
+    <Property Name="ProductSpec" Type="nvarchar" MaxLength="200" />
+    <Property Name="ProductUnit" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProductNotes" Type="nvarchar" MaxLength="300" />
+    <Property Name="Quantity" Type="float" />
+    <Property Name="Date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="StockOutRecords">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerName" Type="nvarchar" MaxLength="500" />
+    <Property Name="CustomerContactPerson" Type="nvarchar" MaxLength="100" />
+    <Property Name="CustomerContact" Type="nvarchar" MaxLength="100" />
+    <Property Name="CustomerAddress" Type="nvarchar" MaxLength="700" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="30" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="200" />
+    <Property Name="ProductSpec" Type="nvarchar" MaxLength="200" />
+    <Property Name="ProductUnit" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProductPrice" Type="float" />
+    <Property Name="ProductNotes" Type="nvarchar" MaxLength="300" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Order" Type="int" />
+    <Property Name="ProductQuantity" Type="int" />
+    <Property Name="ProductTotalAmount" Type="float" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Password" Type="binary" MaxLength="20" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="150" />
+    <Property Name="CompanyContact" Type="nvarchar" MaxLength="20" />
+    <Property Name="CompanyAddress" Type="nvarchar" MaxLength="200" />
+    <Property Name="CompanyFax" Type="nvarchar" MaxLength="15" />
+    <Property Name="InvoiceCreator" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+</Schema>
+</edmx:StorageModels>
+<!-- CSDL content -->
+<edmx:ConceptualModels>
+<Schema Namespace="ManagementDbModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ManagementDbEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Counters" EntityType="ManagementDbModel.Counters" />
+    <EntitySet Name="Customers" EntityType="ManagementDbModel.Customers" />
+    <EntitySet Name="Patches" EntityType="ManagementDbModel.Patches" />
+    <EntitySet Name="Products" EntityType="ManagementDbModel.Products" />
+    <EntitySet Name="StockInRecords" EntityType="ManagementDbModel.StockInRecords" />
+    <EntitySet Name="StockOutRecords" EntityType="ManagementDbModel.StockOutRecords" />
+    <EntitySet Name="Users" EntityType="ManagementDbModel.Users" />
+  </EntityContainer>
+  <EntityType Name="Counters">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Value" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Format" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="ContactPerson" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Contact" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="700" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Patches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Installed" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Spec" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Unit" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="Quantity" Type="Double" />
+    <Property Name="Notes" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="StockInRecords">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="ProductSpec" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="ProductUnit" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ProductNotes" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="Quantity" Type="Double" />
+    <Property Name="Date" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="StockOutRecords">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerName" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="CustomerContactPerson" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="CustomerContact" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="CustomerAddress" Type="String" MaxLength="700" Unicode="true" FixedLength="false" />
+    <Property Name="InvoiceNumber" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="ProductName" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="ProductSpec" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="ProductUnit" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ProductPrice" Type="Double" />
+    <Property Name="ProductNotes" Type="String" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="Date" Type="DateTime" />
+    <Property Name="Order" Type="Int32" />
+    <Property Name="ProductQuantity" Type="Int32" />
+    <Property Name="ProductTotalAmount" Type="Double" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="Binary" MaxLength="20" FixedLength="true" />
+    <Property Name="CompanyName" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="CompanyContact" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="CompanyAddress" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="CompanyFax" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="InvoiceCreator" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+</Schema>
+</edmx:ConceptualModels>
+<!-- C-S mapping content -->
+<edmx:Mappings>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ManagementDbModelStoreContainer" CdmEntityContainer="ManagementDbEntities">
+    <EntitySetMapping Name="Counters">
+      <EntityTypeMapping TypeName="ManagementDbModel.Counters">
+        <MappingFragment StoreEntitySet="Counters">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Format" ColumnName="Format" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="ManagementDbModel.Customers">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patches">
+      <EntityTypeMapping TypeName="ManagementDbModel.Patches">
+        <MappingFragment StoreEntitySet="Patches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Installed" ColumnName="Installed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="ManagementDbModel.Products">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Spec" ColumnName="Spec" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockInRecords">
+      <EntityTypeMapping TypeName="ManagementDbModel.StockInRecords">
+        <MappingFragment StoreEntitySet="StockInRecords">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductSpec" ColumnName="ProductSpec" />
+          <ScalarProperty Name="ProductUnit" ColumnName="ProductUnit" />
+          <ScalarProperty Name="ProductNotes" ColumnName="ProductNotes" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockOutRecords">
+      <EntityTypeMapping TypeName="ManagementDbModel.StockOutRecords">
+        <MappingFragment StoreEntitySet="StockOutRecords">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerContactPerson" ColumnName="CustomerContactPerson" />
+          <ScalarProperty Name="CustomerContact" ColumnName="CustomerContact" />
+          <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductSpec" ColumnName="ProductSpec" />
+          <ScalarProperty Name="ProductUnit" ColumnName="ProductUnit" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="ProductNotes" ColumnName="ProductNotes" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="ProductQuantity" ColumnName="ProductQuantity" />
+          <ScalarProperty Name="ProductTotalAmount" ColumnName="ProductTotalAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ManagementDbModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="CompanyContact" ColumnName="CompanyContact" />
+          <ScalarProperty Name="CompanyAddress" ColumnName="CompanyAddress" />
+          <ScalarProperty Name="CompanyFax" ColumnName="CompanyFax" />
+          <ScalarProperty Name="InvoiceCreator" ColumnName="InvoiceCreator" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
+</edmx:Mappings>
+</edmx:Runtime>
+<!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+<edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+<Connection><DesignerInfoPropertySet><DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" /></DesignerInfoPropertySet></Connection>
+<edmx:Options><DesignerInfoPropertySet><DesignerProperty Name="ValidateOnBuild" Value="True" /><DesignerProperty Name="EnablePluralization" Value="False" /><DesignerProperty Name="IncludeForeignKeysInModel" Value="True" /><DesignerProperty Name="UseLegacyProvider" Value="False" /><DesignerProperty Name="CodeGenerationStrategy" Value="None" /></DesignerInfoPropertySet></edmx:Options>
+<edmx:Diagrams >
+      <Diagram DiagramId="f672a2d99307483d9532d039b0186426" Name="Diagram1">
+        <EntityTypeShape EntityType="ManagementDbModel.Counters" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementDbModel.Customers" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementDbModel.Patches" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementDbModel.Products" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementDbModel.StockInRecords" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementDbModel.StockOutRecords" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagementDbModel.Users" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+</edmx:Designer></edmx:Edmx>
