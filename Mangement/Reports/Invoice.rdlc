@@ -12,7 +12,7 @@
                 <Value>=Parameters!CompanyName.Value</Value>
                 <Style>
                   <FontFamily>FangSong</FontFamily>
-                  <FontSize>15pt</FontSize>
+                  <FontSize>13pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -23,10 +23,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.11112in</Top>
-        <Left>0.797in</Left>
-        <Height>0.23957in</Height>
-        <Width>7.82701in</Width>
+        <Top>0.2396in</Top>
+        <Left>0.60441in</Left>
+        <Height>0.20832in</Height>
+        <Width>7.45803in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -43,7 +43,7 @@
                 <Value>=Parameters!CompanyAddress.Value</Value>
                 <Style>
                   <FontFamily>Fangsong</FontFamily>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -56,7 +56,7 @@
               <TextRun>
                 <Value />
                 <Style>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -64,8 +64,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.39236in</Top>
-        <Left>3.33921in</Left>
+        <Top>0.4618in</Top>
+        <Left>3.00512in</Left>
         <Height>0.18402in</Height>
         <Width>2.77083in</Width>
         <ZIndex>1</ZIndex>
@@ -84,7 +84,7 @@
               <TextRun>
                 <Value>TEL:</Value>
                 <Style>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -92,10 +92,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>0.60416in</Top>
-        <Left>3.44337in</Left>
+        <Top>0.65971in</Top>
+        <Left>3.00512in</Left>
         <Height>0.16in</Height>
-        <Width>0.30208in</Width>
+        <Width>0.22916in</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -112,7 +112,7 @@
               <TextRun>
                 <Value>FAX:</Value>
                 <Style>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -120,10 +120,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>0.60416in</Top>
-        <Left>4.80101in</Left>
+        <Top>0.65972in</Top>
+        <Left>4.6022in</Left>
         <Height>0.16in</Height>
-        <Width>0.36458in</Width>
+        <Width>0.24926in</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -141,7 +141,7 @@
                 <Value>送货单</Value>
                 <Style>
                   <FontFamily>FangSong</FontFamily>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -151,8 +151,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>0.79194in</Top>
-        <Left>4.23503in</Left>
+        <Top>0.8336in</Top>
+        <Left>3.87923in</Left>
         <Height>0.19096in</Height>
         <Width>0.93056in</Width>
         <ZIndex>4</ZIndex>
@@ -173,13 +173,13 @@
                 <Value>客户电话</Value>
                 <Style>
                   <FontFamily>Fangsong</FontFamily>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
               <TextRun>
                 <Value>:</Value>
                 <Style>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -189,9 +189,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>1.01096in</Top>
-        <Left>4.50754in</Left>
-        <Height>0.18in</Height>
+        <Top>1.06441in</Top>
+        <Left>4.05212in</Left>
+        <Height>0.12in</Height>
         <Width>0.69791in</Width>
         <ZIndex>5</ZIndex>
         <Style>
@@ -200,8 +200,6 @@
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
       <Textbox Name="Textbox7">
@@ -213,7 +211,7 @@
               <TextRun>
                 <Value>=Parameters!CompanyTel.Value</Value>
                 <Style>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -221,8 +219,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>0.60416in</Top>
-        <Left>3.77323in</Left>
+        <Top>0.65971in</Top>
+        <Left>3.27595in</Left>
         <Height>0.16in</Height>
         <Width>0.91667in</Width>
         <ZIndex>6</ZIndex>
@@ -241,7 +239,7 @@
               <TextRun>
                 <Value>=Parameters!CompanyFax.Value</Value>
                 <Style>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -249,8 +247,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>0.60416in</Top>
-        <Left>5.19337in</Left>
+        <Top>0.65971in</Top>
+        <Left>4.87924in</Left>
         <Height>0.16in</Height>
         <Width>0.91667in</Width>
         <ZIndex>7</ZIndex>
@@ -269,7 +267,7 @@
               <TextRun>
                 <Value>NO:</Value>
                 <Style>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -277,10 +275,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
-        <Top>2.06627cm</Top>
-        <Left>17.87102cm</Left>
-        <Height>0.4cm</Height>
-        <Width>0.64792cm</Width>
+        <Top>2.22629cm</Top>
+        <Left>15.93311cm</Left>
+        <Height>0.3362cm</Height>
+        <Width>0.61264cm</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -288,8 +286,6 @@
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
       <Textbox Name="Textbox10">
@@ -301,17 +297,19 @@
               <TextRun>
                 <Value>=Parameters!InvoiceNumber.Value</Value>
                 <Style>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox10</rd:DefaultName>
-        <Top>2.06627cm</Top>
-        <Left>18.62477cm</Left>
-        <Height>0.4cm</Height>
+        <Top>2.22629cm</Top>
+        <Left>16.65159cm</Left>
+        <Height>0.3362cm</Height>
         <Width>2.10312cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
@@ -320,8 +318,6 @@
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
       <Textbox Name="Textbox11">
@@ -334,7 +330,7 @@
                 <Value>联系人:</Value>
                 <Style>
                   <FontFamily>Fangsong</FontFamily>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -344,9 +340,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>1.21873in</Top>
-        <Left>4.50755in</Left>
-        <Height>0.18in</Height>
+        <Top>1.22608in</Top>
+        <Left>4.06602in</Left>
+        <Height>0.12in</Height>
         <Width>0.68401in</Width>
         <ZIndex>10</ZIndex>
         <Style>
@@ -355,8 +351,6 @@
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
       <Textbox Name="Textbox12">
@@ -369,7 +363,7 @@
                 <Value>=Parameters!CustomerContactNumber.Value</Value>
                 <Style>
                   <FontFamily>FangSong</FontFamily>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -377,9 +371,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox12</rd:DefaultName>
-        <Top>2.56785cm</Top>
-        <Left>13.25714cm</Left>
-        <Height>0.42333cm</Height>
+        <Top>2.7036cm</Top>
+        <Left>12.1709cm</Left>
+        <Height>0.3048cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
@@ -389,8 +383,6 @@
           <VerticalAlign>Middle</VerticalAlign>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
       <Textbox Name="Textbox13">
@@ -403,7 +395,7 @@
                 <Value>=Parameters!CustomerContactPerson.Value</Value>
                 <Style>
                   <FontFamily>FangSong</FontFamily>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -411,9 +403,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox12</rd:DefaultName>
-        <Top>3.09701cm</Top>
-        <Left>13.25714cm</Left>
-        <Height>0.45579cm</Height>
+        <Top>3.11424cm</Top>
+        <Left>12.1709cm</Left>
+        <Height>0.3048cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>12</ZIndex>
         <Style>
@@ -423,8 +415,6 @@
           <VerticalAlign>Middle</VerticalAlign>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
       <Textbox Name="Textbox14">
@@ -437,7 +427,7 @@
                 <Value>制单人员:</Value>
                 <Style>
                   <FontFamily>Fangsong</FontFamily>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -447,10 +437,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>0.99874in</Top>
-        <Left>7.03583in</Left>
-        <Height>0.17944in</Height>
-        <Width>0.65in</Width>
+        <Top>1.06441in</Top>
+        <Left>6.27288in</Left>
+        <Height>0.12in</Height>
+        <Width>0.53542in</Width>
         <ZIndex>13</ZIndex>
         <Style>
           <Border>
@@ -458,8 +448,6 @@
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
       <Textbox Name="Textbox15">
@@ -472,7 +460,7 @@
                 <Value>送货日期:</Value>
                 <Style>
                   <FontFamily>Fangsong</FontFamily>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -482,10 +470,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>1.20651in</Top>
-        <Left>7.03583in</Left>
-        <Height>0.17944in</Height>
-        <Width>0.65in</Width>
+        <Top>1.22608in</Top>
+        <Left>6.25899in</Left>
+        <Height>0.12in</Height>
+        <Width>0.5493in</Width>
         <ZIndex>14</ZIndex>
         <Style>
           <Border>
@@ -493,8 +481,6 @@
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
       <Textbox Name="Textbox16">
@@ -507,13 +493,13 @@
                 <Value>客户名称</Value>
                 <Style>
                   <FontFamily>FangSong</FontFamily>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
               <TextRun>
                 <Value>:</Value>
                 <Style>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -523,9 +509,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>0.99763in</Top>
-        <Left>0.77083in</Left>
-        <Height>0.18in</Height>
+        <Top>1.06441in</Top>
+        <Left>0.91667in</Left>
+        <Height>0.12in</Height>
         <Width>0.57291in</Width>
         <ZIndex>15</ZIndex>
         <Style>
@@ -534,8 +520,6 @@
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
       <Textbox Name="Textbox17">
@@ -548,13 +532,13 @@
                 <Value>客户地址</Value>
                 <Style>
                   <FontFamily>Fangsong</FontFamily>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
               <TextRun>
                 <Value>:</Value>
                 <Style>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -564,9 +548,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>1.2054in</Top>
-        <Left>0.77083in</Left>
-        <Height>0.18in</Height>
+        <Top>1.22608in</Top>
+        <Left>0.91667in</Left>
+        <Height>0.12in</Height>
         <Width>0.57291in</Width>
         <ZIndex>16</ZIndex>
         <Style>
@@ -575,8 +559,6 @@
           </Border>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
       <Textbox Name="Textbox102">
@@ -589,7 +571,7 @@
                 <Value>注: 以上货品请核对数量, 如有质量问题,请在收货后3天内通知本公司,逾期恕不负责</Value>
                 <Style>
                   <FontFamily>Fangsong</FontFamily>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -597,8 +579,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox102</rd:DefaultName>
-        <Top>7.74772cm</Top>
-        <Left>1.95791cm</Left>
+        <Top>7.66833cm</Top>
+        <Left>2.32834cm</Left>
         <Height>0.3707cm</Height>
         <Width>14.75021cm</Width>
         <ZIndex>17</ZIndex>
@@ -618,7 +600,7 @@
                 <Value>送货单位及经手人（盖章）：</Value>
                 <Style>
                   <FontFamily>Fangsong</FontFamily>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -628,8 +610,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>3.23789in</Top>
-        <Left>0.77083in</Left>
+        <Top>3.19275in</Top>
+        <Left>0.91667in</Left>
         <Height>0.16667in</Height>
         <Width>1.57291in</Width>
         <ZIndex>18</ZIndex>
@@ -653,7 +635,7 @@
                 <Value>收货单位及经手人（盖章）：</Value>
                 <Style>
                   <FontFamily>Fangsong</FontFamily>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -663,8 +645,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>3.23789in</Top>
-        <Left>4.96055in</Left>
+        <Top>3.19275in</Top>
+        <Left>5.10639in</Left>
         <Height>0.16667in</Height>
         <Width>1.61745in</Width>
         <ZIndex>19</ZIndex>
@@ -709,8 +691,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox106</rd:DefaultName>
-        <Top>3.65716cm</Top>
-        <Left>21.47403cm</Left>
+        <Top>3.54078cm</Top>
+        <Left>19.16922cm</Left>
         <Height>1.27256cm</Height>
         <Width>0.47153cm</Width>
         <ZIndex>20</ZIndex>
@@ -759,8 +741,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox106</rd:DefaultName>
-        <Top>5.10611cm</Top>
-        <Left>21.47403cm</Left>
+        <Top>4.98973cm</Top>
+        <Left>19.16922cm</Left>
         <Height>1.20486cm</Height>
         <Width>0.47153cm</Width>
         <ZIndex>21</ZIndex>
@@ -798,8 +780,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox106</rd:DefaultName>
-        <Top>6.48736cm</Top>
-        <Left>21.47403cm</Left>
+        <Top>6.37098cm</Top>
+        <Left>19.16922cm</Left>
         <Height>1.2cm</Height>
         <Width>0.47153cm</Width>
         <ZIndex>22</ZIndex>
@@ -823,7 +805,7 @@
                 <Value>=Parameters!CustomerName.Value</Value>
                 <Style>
                   <FontFamily>FangSong</FontFamily>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -833,10 +815,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox12</rd:DefaultName>
-        <Top>2.53397cm</Top>
-        <Left>3.4484cm</Left>
-        <Height>0.4572cm</Height>
-        <Width>7.09493cm</Width>
+        <Top>2.7036cm</Top>
+        <Left>3.81881cm</Left>
+        <Height>0.3048cm</Height>
+        <Width>4.66076cm</Width>
         <ZIndex>23</ZIndex>
         <Style>
           <Border>
@@ -845,8 +827,6 @@
           <VerticalAlign>Middle</VerticalAlign>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
       <Textbox Name="Textbox21">
@@ -859,7 +839,7 @@
                 <Value>=Parameters!CustomerAddress.Value</Value>
                 <Style>
                   <FontFamily>FangSong</FontFamily>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -867,10 +847,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox12</rd:DefaultName>
-        <Top>3.06313cm</Top>
-        <Left>3.41313cm</Left>
-        <Height>0.4572cm</Height>
-        <Width>7.1302cm</Width>
+        <Top>3.11424cm</Top>
+        <Left>3.85408cm</Left>
+        <Height>0.32071cm</Height>
+        <Width>4.66076cm</Width>
         <ZIndex>24</ZIndex>
         <Style>
           <Border>
@@ -879,8 +859,6 @@
           <VerticalAlign>Middle</VerticalAlign>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
       <Textbox Name="Textbox22">
@@ -893,7 +871,7 @@
                 <Value>=Parameters!InvoiceDate.Value</Value>
                 <Style>
                   <FontFamily>FangSong</FontFamily>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -903,9 +881,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox12</rd:DefaultName>
-        <Top>3.06596cm</Top>
-        <Left>19.52202cm</Left>
-        <Height>0.45579cm</Height>
+        <Top>3.11424cm</Top>
+        <Left>17.3989cm</Left>
+        <Height>0.32071cm</Height>
         <Width>1.81853cm</Width>
         <ZIndex>25</ZIndex>
         <Style>
@@ -915,8 +893,6 @@
           <VerticalAlign>Middle</VerticalAlign>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
       <Textbox Name="Textbox23">
@@ -929,7 +905,7 @@
                 <Value>=Parameters!MadeBy.Value</Value>
                 <Style>
                   <FontFamily>FangSong</FontFamily>
-                  <FontSize>7.5pt</FontSize>
+                  <FontSize>7pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -939,9 +915,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox12</rd:DefaultName>
-        <Top>2.5368cm</Top>
-        <Left>19.52202cm</Left>
-        <Height>0.45579cm</Height>
+        <Top>2.7036cm</Top>
+        <Left>17.3989cm</Left>
+        <Height>0.3048cm</Height>
         <Width>1.81853cm</Width>
         <ZIndex>26</ZIndex>
         <Style>
@@ -951,21 +927,19 @@
           <VerticalAlign>Middle</VerticalAlign>
           <PaddingLeft>2pt</PaddingLeft>
           <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
       <Tablix Name="Tablix2">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>0.96373cm</Width>
+              <Width>0.75206cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.11942cm</Width>
+              <Width>4.11407cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.89018cm</Width>
+              <Width>3.86854cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.86094cm</Width>
@@ -977,7 +951,7 @@
               <Width>1.47582cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.0366cm</Width>
+              <Width>1.70586cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.62347cm</Width>
@@ -4555,10 +4529,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>3.65716cm</Top>
-        <Left>1.95792cm</Left>
+        <Top>3.52487cm</Top>
+        <Left>2.32834cm</Left>
         <Height>4.02cm</Height>
-        <Width>19.41028cm</Width>
+        <Width>16.84088cm</Width>
         <ZIndex>27</ZIndex>
         <DataElementOutput>NoOutput</DataElementOutput>
         <Style>
@@ -4579,12 +4553,12 @@
       <BackgroundColor>White</BackgroundColor>
     </Style>
   </Body>
-  <Width>24cm</Width>
+  <Width>21.94708cm</Width>
   <Page>
-    <PageHeight>24cm</PageHeight>
-    <PageWidth>24cm</PageWidth>
-    <InteractiveHeight>24cm</InteractiveHeight>
-    <InteractiveWidth>24cm</InteractiveWidth>
+    <PageHeight>22cm</PageHeight>
+    <PageWidth>22cm</PageWidth>
+    <InteractiveHeight>22cm</InteractiveHeight>
+    <InteractiveWidth>22cm</InteractiveWidth>
     <LeftMargin>0cm</LeftMargin>
     <RightMargin>0cm</RightMargin>
     <TopMargin>0cm</TopMargin>
