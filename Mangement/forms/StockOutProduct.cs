@@ -16,6 +16,7 @@ namespace Management.forms
         private List<Customers> customers;
         private Customers selectedCustomer;
         private List<Products> products;
+        ToolTip tip = new ToolTip();
         public StockOutProduct()
         {
             InitializeComponent();
@@ -34,9 +35,50 @@ namespace Management.forms
                 }
 
                 DataGridViewComboBoxColumn theColumn = (DataGridViewComboBoxColumn)this.GridProducts.Columns["ColName"];
-                theColumn.DataSource = products;
-                theColumn.ValueMember = "Id";
-                theColumn.DisplayMember = "Name";
+                foreach (var product in products)
+                {
+                    ComboboxItem item = new ComboboxItem { Text = product.Name, Value = product.Id };
+                    theColumn.Items.Add(item);
+                }
+                theColumn.ValueMember = "Value";
+                theColumn.DisplayMember = "Text";
+                this.GridProducts.EditingControlShowing += new DataGridViewEditingControlShowingEventHandler(GridProducts_EditingControlShowing);
+            }
+        }
+
+        void GridProducts_EditingControlShowing(object sender,DataGridViewEditingControlShowingEventArgs e)
+        {
+            if (e.Control is ComboBox)
+            {
+                ComboBox cmb = e.Control as ComboBox;
+                cmb.DrawMode = DrawMode.OwnerDrawFixed;
+                cmb.DrawItem -= new DrawItemEventHandler(cmb_DrawItem);
+                cmb.DrawItem += new DrawItemEventHandler(cmb_DrawItem);
+            }
+        }
+
+        void cmb_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            ComboBox cmb = sender as ComboBox;
+            if (e.Index >= 0)
+            {
+                var product = products.Where(p => p.Id.ToString() == (cmb.Items[e.Index] as ComboboxItem).Value.ToString()).FirstOrDefault();
+                string combotext = (cmb.Items[e.Index] as ComboboxItem).Text;
+                e.DrawBackground();
+                using (SolidBrush br = new SolidBrush(e.ForeColor))
+                {
+                    e.Graphics.DrawString(combotext, e.Font, br, e.Bounds);
+                }
+                string text = "名称：" + product.Name + " 规格：" + product.Spec + " 单位：" + product.Unit + " 单价：" + product.Price.ToString();
+                if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+                {
+                    this.tip.Show(text, cmb, e.Bounds.X, e.Bounds.Y);
+                }
+                else
+                {
+                    this.tip.Hide(cmb);
+                }
+                e.DrawFocusRectangle();
             }
         }
 
@@ -134,7 +176,19 @@ namespace Management.forms
             labWarning.Visible = false;
             foreach (DataGridViewRow row in GridProducts.Rows)
             {
+                if (row.Cells["ColQuantity"].Value == null)
+                {
+                    thisCanBeProceed = false;
+                    labWarning.Visible = true;
+                    break;
+                }
                 if (row.Cells["ColQuantity"].Value.ToString() == string.Empty || !int.TryParse(row.Cells["ColQuantity"].Value.ToString(), out quantity))
+                {
+                    thisCanBeProceed = false;
+                    labWarning.Visible = true;
+                    break;
+                }
+                if (row.Cells["ColPrice"].Value == null)
                 {
                     thisCanBeProceed = false;
                     labWarning.Visible = true;
@@ -146,15 +200,15 @@ namespace Management.forms
                     labWarning.Visible = true;
                     break;
                 }
-                Products selectedProduct;
-                DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)row.Cells["ColName"];
-                selectedProduct = products.Where(p => p.Id.ToString() == Convert.ToString(cb.Value)).FirstOrDefault();
-                if(selectedProduct.Quantity<quantity)
-                {
-                    thisCanBeProceed = false;
-                    MessageBox.Show(selectedProduct.Name+ "库存不足", "错误", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
-                    break;
-                }
+                //Products selectedProduct;
+                //DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)row.Cells["ColName"];
+                //selectedProduct = products.Where(p => p.Id.ToString() == Convert.ToString(cb.Value)).FirstOrDefault();
+                //if (selectedProduct.Quantity < quantity)
+                //{
+                //    thisCanBeProceed = false;
+                //    MessageBox.Show(selectedProduct.Name + "库存不足", "错误", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
+                //    break;
+                //}
             }
             if (thisCanBeProceed)
             {
@@ -169,7 +223,7 @@ namespace Management.forms
                         var total = price * quantity;
                         var newRecord = new StockOutRecords
                         {
-                            CustomerName = selectedCustomer.Name,
+                            CustomerName = comboCustomerName.Text,
                             CustomerContactPerson = txtContactPerson.Text,
                             CustomerContact = txtContact.Text,
                             CustomerAddress = txtAddress.Text,
@@ -185,11 +239,11 @@ namespace Management.forms
                             Order = row.Index+1,
                         };
                         context.StockOutRecords.Add(newRecord);
-                        Products selectedProduct;
-                        DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)row.Cells["ColName"];
-                        selectedProduct = products.Where(p => p.Id.ToString() == Convert.ToString(cb.Value)).FirstOrDefault();
-                        var stockoutProduct = context.Products.Where(p => p.Id == selectedProduct.Id).FirstOrDefault();
-                        stockoutProduct.Quantity = stockoutProduct.Quantity - quantity;
+                        //Products selectedProduct;
+                        //DataGridViewComboBoxCell cb = (DataGridViewComboBoxCell)row.Cells["ColName"];
+                        //selectedProduct = products.Where(p => p.Id.ToString() == Convert.ToString(cb.Value)).FirstOrDefault();
+                        //var stockoutProduct = context.Products.Where(p => p.Id == selectedProduct.Id).FirstOrDefault();
+                        //stockoutProduct.Quantity = stockoutProduct.Quantity - quantity;
                         context.SaveChanges();
                     }
                 }
